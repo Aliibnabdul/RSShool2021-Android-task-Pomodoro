@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity(), StopwatchListener, LifecycleObserver, 
         binding.recycler.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = stopwatchAdapter
+            setHasFixedSize(true)
         }
 
         viewModel.itemsLiveData.observe(this, {
